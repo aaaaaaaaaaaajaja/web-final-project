@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <meta charset = "utf-8">
+    <title>紅白歌合戰</title>
+    <style type = "text/css">
+    body  { background-color: rgb(245, 246, 240);
+            background-attachment: fixed;
+            background-image: url(紅白歌合戦.png);
+            background-repeat: no-repeat;
+            background-size: 400px 400px;}
+    .foreground_image   { 
+        top: 0px;
+        left: 0px;
+        width: calc(100% / 6);
+        height: calc(100% / 6);
+    }
+    div   { font-weight: bold;
+            color:black;
+            border: 1px solid black;
+            height: 25px;      
+            line-height: 25px;
+            width: calc(100% / 12);
+            background-color: rgb(255, 238, 164);
+            text-align:center;}
+    .menu {
+            position: absolute;
+            display: inline;
+            top: calc(100% / 3);
+    }
+    .box {  
+            height: 120px;
+            align-items: center;
+            display: flex;      
+/*             line-height: 120px; */
+            box-sizing: border-box;
+            margin-left: 1px;
+            float: left;
+        }
+    .box:hover{
+        transform: scale(1.2);
+    }
+    </style>
+    <script src="mainpage.js"></script>
+    </head>
+
+    <body>
+    <div class = menu id = MainPage style = "left: 25%;">
+        <a>首頁</a>
+    </div>
+    <div class = menu id = RedTeam style = "left: 50%;">
+        <a>赤</a>
+    </div>
+    <div class = menu id = WhiteTeam style = "left:75%;">
+        <a>白</a>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p id = Singers style = "text-align: center;">
+        singers
+    </p>
+    <br><br><br><br>
+    <p id = content style  = "text-align: center;margin-left: 25%;border: 1px solid black;width: calc(100%/12*7);">
+        MainPage
+    </p>
+    </body>
+</html>
