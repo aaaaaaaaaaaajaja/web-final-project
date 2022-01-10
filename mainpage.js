@@ -1,6 +1,3 @@
-var RedLink;
-var WhiteLink;
-var MainLink;
 var ContentText;
 var SingersParagraph;
 var i = 0;
@@ -26,7 +23,6 @@ BoxRed[17] = '<img src = "東京事変.jpg" width = 100% height = 100% alt = "�
 BoxRed[18] = '<img src = "薬師丸ひろ子.jpg" width = 100% height = 100% alt = "薬師丸ひろ子" />';
 BoxRed[19] = '<img src = "石川さゆり.jpg" width = 100% height = 100% alt = "石川さゆり" />';
 BoxRed[20] = '<img src = "MISIA.jpg" width = 100% height = 100% alt = "MISIA" />';
-var RedBox = new Array(21);
 
 var BoxWhite = new Array(21);
 BoxWhite[0] = '<img src = "郷ひろみ.jpg" width = 100% height = 100% alt = "郷ひろみ" />';
@@ -50,18 +46,24 @@ BoxWhite[17] = '<img src = "BUMP OF CHICKEN.jpg" width = 100% height = 100% alt 
 BoxWhite[18] = '<img src = "氷川きよし.jpg" width = 100% height = 100% alt = "氷川きよし" />';
 BoxWhite[19] = '<img src = "布袋寅泰.jpg" width = 100% height = 100% alt = "布袋寅泰" />';
 BoxWhite[20] = '<img src = "福山雅治.jpg" width = 100% height = 100% alt = "福山雅治" />';
-var WhiteBox = new Array(21);
 
 function start()
 {
-    RedLink = document.getElementById( "RedTeam" );
-    WhiteLink = document.getElementById( "WhiteTeam" );
-    MainLink = document.getElementById( "MainPage" );
+    document.getElementById( "RedTeam" ).addEventListener( "click" , Red , false);;
+    document.getElementById( "WhiteTeam" ).addEventListener( "click" , White , false);
+    document.getElementById( "MainPage" ).addEventListener( "click" , Home , false);
     SingersParagraph = document.getElementById( "Singers" );
     ContentText = document.getElementById ( "content" );
-    RedLink.addEventListener( "click" , Red , false);
-    WhiteLink.addEventListener( "click" , White , false);
-    MainLink.addEventListener( "click" , Home , false);
+
+    $("#MainPage").click(function(){
+        $("#Singers").hide();
+    });
+    $("#RedTeam").click(function(){
+        $("#Singers").show();
+    });
+    $("#WhiteTeam").click(function(){
+        $("#Singers").show();
+    });
 }
 
 function Red(){
@@ -82,13 +84,132 @@ function Red(){
     for(i = 15;i < 21;i++){
         SingersParagraph.innerHTML += '<div id = BoxRed'+i+' class = box style = "style = "display: inline;">'+BoxRed[i]+'</div>';
     }
-    RedBox[0] = document.getElementById( "BoxRed0" );
-    RedBox[0].addEventListener( "click" , LiSA , false);
+    document.getElementById( "BoxRed0" ).addEventListener( "click" , LiSA , false);
+    document.getElementById( "BoxRed1" ).addEventListener( "click" , NiziU , false);
+    document.getElementById( "BoxRed2" ).addEventListener( "click" , 櫻坂46 , false);
+    document.getElementById( "BoxRed3" ).addEventListener( "click" , AwesomeCityClub , false);
+    document.getElementById( "BoxRed4" ).addEventListener( "click" , 日向坂46 , false);
+    document.getElementById( "BoxRed5" ).addEventListener( "click" , 天童よしみ , false);
+    document.getElementById( "BoxRed6" ).addEventListener( "click" , 上白石萌音 , false);
+    document.getElementById( "BoxRed7" ).addEventListener( "click" , milet , false);
+    document.getElementById( "BoxRed8" ).addEventListener( "click" , 水森かおり , false);
+    document.getElementById( "BoxRed9" ).addEventListener( "click" , AI , false);
+    document.getElementById( "BoxRed10" ).addEventListener( "click" , BiSH , false);
+    document.getElementById( "BoxRed11" ).addEventListener( "click" , Perfume , false);
+    document.getElementById( "BoxRed12" ).addEventListener( "click" , millenniumparade , false);
+    document.getElementById( "BoxRed13" ).addEventListener( "click" , 乃木坂46 , false);
+    document.getElementById( "BoxRed14" ).addEventListener( "click" , 坂本冬美 , false);
+    document.getElementById( "BoxRed15" ).addEventListener( "click" , YOASOBI , false);
+    document.getElementById( "BoxRed16" ).addEventListener( "click" , あいみょん , false);
+    document.getElementById( "BoxRed17" ).addEventListener( "click" , 東京事變 , false);
+    document.getElementById( "BoxRed18" ).addEventListener( "click" , 薬師丸ひろ子 , false);
+    document.getElementById( "BoxRed19" ).addEventListener( "click" , 石川小百合 , false);
+    document.getElementById( "BoxRed20" ).addEventListener( "click" , MISIA , false);
 }
 
 function LiSA(){
     ContentText.innerHTML = "";
     ContentText.innerHTML += "明け星";
+}
+
+function NiziU(){
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "Take a picture";
+}
+
+function 櫻坂46() { 
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "流れ弾";
+}
+
+function AwesomeCityClub() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "勿忘";
+}
+
+function 日向坂46() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "君しか勝たん";
+}
+
+function 天童よしみ() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "あんたの花道〜ブラバンSP〜";
+}
+
+function 上白石萌音() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "夜明けをくちずさめたら";
+}
+
+function milet() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "Fly High";
+}
+
+function 水森かおり() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "いい日旅立ち";
+}
+
+function AI() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "アルデバラン";
+}
+
+function BiSH() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "プロミスザスター";
+}
+
+function Perfume() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "ポリゴンウェイヴ";
+}
+
+function millenniumparade() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "U";
+}
+
+function 乃木坂46() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "きっかけ";
+}
+
+function 坂本冬美() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "夜桜お七";
+}
+
+function YOASOBI() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "群青";
+}
+
+function あいみょん() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "愛を知るまでは";
+}
+
+function 東京事變() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "緑酒";
+}
+
+function 薬師丸ひろ子() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += 'Woman "Wの悲劇"より';
+}
+
+function 石川小百合() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "津輕海峽·冬景色";
+}
+
+function MISIA() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "明日へ";
 }
 
 function White(){
@@ -109,12 +230,138 @@ function White(){
     for(i = 15;i < 21;i++){
         SingersParagraph.innerHTML += '<div id = BoxWhite'+i+' class = box style = "style = "display: inline;">'+BoxWhite[i]+'</div>';
     }
+
+    document.getElementById( "BoxWhite0" ).addEventListener( "click" , 郷ひろみ , false);
+    document.getElementById( "BoxWhite1" ).addEventListener( "click" , DISH , false);
+    document.getElementById( "BoxWhite2" ).addEventListener( "click" , 山内惠介 , false);
+    document.getElementById( "BoxWhite3" ).addEventListener( "click" , GENERATIONS , false);
+    document.getElementById( "BoxWhite4" ).addEventListener( "click" , 純烈 , false);
+    document.getElementById( "BoxWhite5" ).addEventListener( "click" , SixTONES , false);
+    document.getElementById( "BoxWhite6" ).addEventListener( "click" , KATTUN , false);
+    document.getElementById( "BoxWhite7" ).addEventListener( "click" , KingPrince , false);
+    document.getElementById( "BoxWhite8" ).addEventListener( "click" , まふまふ , false);
+    document.getElementById( "BoxWhite9" ).addEventListener( "click" , SnowMan , false);
+    document.getElementById( "BoxWhite10" ).addEventListener( "click" , 関ジャニ , false);
+    document.getElementById( "BoxWhite11" ).addEventListener( "click" , 平井大 , false);
+    document.getElementById( "BoxWhite12" ).addEventListener( "click" , 宮本浩次 , false);
+    document.getElementById( "BoxWhite13" ).addEventListener( "click" , 藤井風 , false);
+    document.getElementById( "BoxWhite14" ).addEventListener( "click" , 鈴木雅之 , false);
+    document.getElementById( "BoxWhite15" ).addEventListener( "click" , ゆず , false);
+    document.getElementById( "BoxWhite16" ).addEventListener( "click" , 星野源 , false);
+    document.getElementById( "BoxWhite17" ).addEventListener( "click" , BUMPOFCHICKEN , false);
+    document.getElementById( "BoxWhite18" ).addEventListener( "click" , 氷川きよし , false);
+    document.getElementById( "BoxWhite19" ).addEventListener( "click" , 布袋寅泰 , false);
+    document.getElementById( "BBoxWhite20" ).addEventListener( "click" , 福山雅治 , false);
+}
+
+function 郷ひろみ() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "2億4千万の瞳-エキゾチック・ジャパン-";
+}
+
+function DISH() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "猫";
+}
+
+function 山内惠介() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "有楽町で逢いましょう";
+}
+
+function GENERATIONS() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "Make Me Better";
+}
+
+function 純烈() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "君がそばにいるから ";
+}
+
+function SixTONES() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "マスカラ ";
+}
+
+function KATTUN() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "Real Face #2 ";
+}
+
+function KingPrince() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "恋降る月夜に君想ふ ";
+}
+
+function まふまふ() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "命に嫌われている。 ";
+}
+
+function SnowMan() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "D.D. ";
+}
+
+function 関ジャニ() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "Re:LIVE";
+}
+
+function 平井大() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "Stand by me, Stand by you.";
+}
+
+function 宮本浩次() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "夜明けのうた ";
+}
+
+function 藤井風() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "きらり、燃えよ";
+}
+
+function 鈴木雅之() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "め組のひと";
+}
+
+function ゆず() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "虹";
+}
+
+function 星野源() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "不思議";
+}
+
+function BUMPOFCHICKEN() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "天体観測、なないろ";
+}
+
+function 氷川きよし() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "歌は我が命";
+}
+
+function 布袋寅泰() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "さらば青春の光";
+}
+
+function 福山雅治() {
+    ContentText.innerHTML = "";
+    ContentText.innerHTML += "道標";
 }
 
 function Home(){
     ContentText.innerHTML = " ";
     ContentText.innerHTML += 'MainPage';
-    SingersParagraph.innerHTML = ' ';
-    SingersParagraph.innerHTML += 'singers';
+
 }
 window.addEventListener( "load", start, false );
