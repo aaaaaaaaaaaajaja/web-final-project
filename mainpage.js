@@ -13,7 +13,7 @@ BoxRed[7] = '<img src = "milet.jpg" width = 100% height = 100% alt = "milet" />'
 BoxRed[8] = '<img src = "水森香織.jpg" width = 100% height = 100% alt = "水森香織" />';
 BoxRed[9] = '<img src = "AI.jpg" width = 100% height = 100% alt = "AI" />';
 BoxRed[10] = '<img src = "BiSH.jpg" width = 100% height = 100% alt = "BiSH" />';
-BoxRed[11] = '<img src = "Perfume.jpg" width = 100% height = 100% alt = "Perfume" />';
+BoxRed[11] = '<img src = "perfume.jpg" width = 100% height = 100% alt = "Perfume" />';
 BoxRed[12] = '<img src = "millennium parade×Belle.jpg" width = 100% height = 100% alt = "millennium parade×Belle" />';
 BoxRed[13] = '<img src = "乃木坂46.jpg" width = 100% height = 100% alt = "乃木坂46" />';
 BoxRed[14] = '<img src = "坂本冬美.jpg" width = 100% height = 100% alt = "坂本冬美" />';
